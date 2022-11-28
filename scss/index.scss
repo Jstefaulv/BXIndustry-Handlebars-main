@@ -1,0 +1,53 @@
+@import "./common/fonts";
+
+.bxi {
+  // Resets for ui-library_style.css (trials)
+  .bxi-button {
+    all: revert;
+    box-sizing: border-box;
+  }
+
+  * {
+    color: inherit;
+    font-weight: 400;
+    font-family: var(--bxi-primary-font);
+  }
+  // End resets
+
+  // Make the footer stick to the bottom or below content
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  overflow-x: hidden;
+
+  footer {
+    margin-top: auto;
+  }
+
+  @import "./common/button";
+  @import "./common/dialog";
+  @import "./common/forms";
+  @import "./common/link";
+  @import "./common/mixins";
+  @import "./common/navbar";
+  @import "./common/shared";
+  @import "./common/utilities";
+
+  @import "./airlines/customizations";
+  @import "./company/customizations";
+  @import "./eats/customizations";
+  @import "./education/customizations";
+  @import "./finance/customizations";
+  @import "./generic/customizations";
+  @import "./government/customizations";
+  @import "./health/customizations";
+  @import "./hotels/customizations";
+  @import "./insurance/customizations";
+  @import "./manufacturing/customizations";
+  @import "./pharmacy/customizations";
+  @import "./realty/customizations";
+  @import "./retail/customizations";
+  @import "./sports/customizations";
+  @import "./volunteer/customizations";
+}

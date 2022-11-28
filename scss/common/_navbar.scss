@@ -1,0 +1,64 @@
+@import "./mixins";
+
+.bxi-user-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  @include breakpoint-lg {
+    display: none;
+  }
+}
+
+.navbar {
+  flex-direction: column;
+}
+
+.static-user-icon {
+  border: 1px solid var(--bxi-primary-color);
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  svg {
+    @include color-icon(var(--bxi-primary-color))
+  }
+}
+
+.navbar-toggler {
+  background: transparent;
+  border: none;
+
+  &:active, &:focus {
+    border: none;
+    box-shadow: none;
+  }
+}
+
+.dashboard .bxi-user-icon {
+  display: flex;
+}
+
+@include breakpoint-lt-lg {
+  // Make the collapsible nav menu float (rather than push page down)
+  .bxi-navbar {
+    position: absolute;
+    top: 60px;
+    min-width: 250px;
+  }
+
+  .bxi-auth-buttons {
+    position: absolute;
+    top: 40px;
+    min-width: 100px;
+    right: 0;
+    padding: .5rem .5rem 0 .5rem;
+  }
+}
